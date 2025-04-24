@@ -6,13 +6,15 @@ const buttons = document.querySelectorAll("[data-time]");
 
 function startTimer(seconds) {
   clearInterval(countdown);
-  displayEndTime(Date.now() + seconds * 1000);
+  const endTime = Date.now() + seconds * 1000;
+  displayEndTime(endTime);
 
   displayTimer(seconds);
   countdown = setInterval(() => {
-    seconds--;
-    displayTimer(seconds);
-    if (seconds <= 0) {
+    const now = Date.now();
+    secondsLeft = Math.round((endTime - now) / 1000);
+    displayTimer(secondsLeft);
+    if (secondsLeft <= 0) {
       clearInterval(countdown);
       alternateTimers();
       return;
