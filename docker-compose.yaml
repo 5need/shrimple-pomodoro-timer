@@ -1,29 +1,8 @@
 services:
   app:
-    image: shrimple-pomodoro-timer
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
-    container_name: shrimple-pomodoro-timer
-    volumes:
-      - .:/app
+    build: .
     ports:
       - "3000:3000"
       - "3001:3001"
-    environment:
-      - GIT_DISCOVERY_ACROSS_FILESYSTEM=1
-      - ENV=development
-
-  app-prod:
-    image: shrimple-pomodoro-timer-prod
-    build:
-      context: .
-      dockerfile: Dockerfile.prod
-    container_name: shrimple-pomodoro-timer-prod
     volumes:
-      - ./static:/app/static
-    ports:
-      - "3000:3000"
-    environment:
-      - GIT_DISCOVERY_ACROSS_FILESYSTEM=1
-    restart: always
+      - ./:/app

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shrimple Pomodoro Timer</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <link rel="icon" href="https://fav.farm/🦐" />
+    <link rel="stylesheet" href="/output.css" />
+  </head>
+  <body
+    data-type
+    class="min-h-svh p-12 bg-blue-500 text-blue-100 data-[type=work]:bg-orange-500 data-[type=work]:text-orange-100 data-[type=break]:bg-teal-500 data-[type=break]:text-teal-100 transition-all duration-1000 flex flex-col items-center"
+  >
+    <div id="time-left" class="text-5xl sm:text-9xl font-mono">--:--</div>
+    <div id="end-time">-</div>
+    <div class="flex flex-wrap gap-2 justify-center mt-4">
+      <button data-time="1500" data-type="work" class="hover:bg-white/10 p-4">
+        Start Pomodoro
+      </button>
+      <button data-time="300" data-type="break" class="hover:bg-white/10 p-4">
+        Start Break
+      </button>
+    </div>
+    <div class="flex flex-col gap-2 justify-center mt-4">
+      <audio id="workBell" controls>
+        <source src="/work.mp3" />
+      </audio>
+      <audio id="breakBell" controls>
+        <source src="/break.mp3" />
+      </audio>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
