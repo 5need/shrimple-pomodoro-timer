@@ -30,7 +30,14 @@ function displayTimer(secondsLeft) {
   if (countdownType == "work") circleEmoji = "🟠 ";
   if (countdownType == "break") circleEmoji = "🔵 ";
 
-  document.title = circleEmoji + timeFormatted;
+  let titleText = "";
+  if (minutes < 1) {
+    titleText = `<1m left`;
+  } else {
+    titleText = `${minutes}m left`;
+  }
+
+  document.title = circleEmoji + titleText;
   timerDisplay.innerHTML = timeFormatted;
 }
 
