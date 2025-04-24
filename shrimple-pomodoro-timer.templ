@@ -34,6 +34,14 @@ templ ShrimplePomodoroTimer() {
 				<button data-time="1500" data-type="work" class="hover:bg-white/10 p-4">Start Pomodoro</button>
 				<button data-time="300" data-type="break" class="hover:bg-white/10 p-4">Start Break</button>
 			</div>
+			<div class="flex flex-col gap-2 justify-center mt-4">
+				<audio id="workBell" controls>
+					<source src="/work.mp3"/>
+				</audio>
+				<audio id="breakBell" controls>
+					<source src="/break.mp3"/>
+				</audio>
+			</div>
 			<script src="shrimple-pomodoro-timer.js"></script>
 		</body>
 	</html>

@@ -67,5 +67,9 @@ buttons.forEach((el) => {
     countdownType = e.target.dataset.type;
     document.body.dataset.type = countdownType;
     startTimer(e.target.dataset.time);
+    // play bell
+    const audioElement = document.querySelector(`#${countdownType}Bell`);
+    audioElement.currentTime = 0;
+    audioElement.play();
   });
 });

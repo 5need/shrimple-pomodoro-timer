@@ -22,6 +22,8 @@ func main() {
 	http.Handle("/", templ.Handler(ShrimplePomodoroTimer()))
 	http.HandleFunc("/shrimple-pomodoro-timer.js", serveFileWithOptionalNoCache("shrimple-pomodoro-timer.js"))
 	http.HandleFunc("/output.css", serveFileWithOptionalNoCache("output.css"))
+	http.HandleFunc("/work.mp3", serveFileWithOptionalNoCache("work.mp3"))
+	http.HandleFunc("/break.mp3", serveFileWithOptionalNoCache("break.mp3"))
 
 	http.ListenAndServe(":3000", nil)
 }
