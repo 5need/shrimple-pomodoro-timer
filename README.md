@@ -1,6 +1,8 @@
 # 🦐Shrimple🦐 Pomodoro Timer
 
 This is a basic example project to help you start building a Pomodoro timer in the browser using plain JavaScript.
+The only fancy thing in here is `TailwindCSS` to make styling easy.
+See `docker-entrypoint.sh` to see how it's used.
 
 ## Installation
 
