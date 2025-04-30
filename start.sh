@@ -3,4 +3,4 @@ echo "+--------------------------------+"
 echo "| Go to 👉 http://localhost:3000 |"
 echo "+--------------------------------+"
 echo ""
-docker compose up app --build
+docker compose up prod --build

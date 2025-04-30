@@ -1,8 +1,14 @@
 services:
-  app:
-    build: .
+  dev:
+    build:
+      dockerfile: ./Dockerfile.dev
     ports:
       - "3000:3000"
       - "3001:3001"
     volumes:
       - ./:/app
+  prod:
+    build:
+      dockerfile: ./Dockerfile.prod
+    ports:
+      - "3000:3000"

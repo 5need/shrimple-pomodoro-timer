@@ -16,4 +16,4 @@ RUN mv tailwindcss-linux-x64 /usr/local/bin/tailwindcss
 # Expose the port
 EXPOSE 3000
 
-CMD ["/app/docker-entrypoint.sh"]
+CMD ["/app/docker-entrypoint-dev.sh"]
