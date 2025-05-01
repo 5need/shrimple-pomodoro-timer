@@ -32,9 +32,10 @@ function displayTimer(secondsLeft) {
 
   let titleText = "";
   if (minutes <= 1) {
-    titleText = `<1m left`;
+    if (countdownType == "work") titleText = "Break soon!";
+    if (countdownType == "break") titleText = "Work soon!";
   } else {
-    titleText = `${minutes + 1}m left`;
+    titleText = `${Math.ceil(secondsLeft / 60)}m left`;
   }
 
   document.title = circleEmoji + titleText;
