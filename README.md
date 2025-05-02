@@ -2,7 +2,7 @@
 
 This is a basic example project to help you start building a Pomodoro timer in the browser using plain JavaScript.
 The only fancy thing in here is `TailwindCSS` to make styling easy.
-See `docker-entrypoint-dev.sh` to see how TailwindCSS is used.
+See `docker/docker-entrypoint-dev.sh` to see how TailwindCSS is used.
 
 ## Installation
 
