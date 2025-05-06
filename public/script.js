@@ -31,7 +31,7 @@ function displayTimer(secondsLeft) {
   if (countdownType == "break") circleEmoji = "🔵 ";
 
   let titleText = "";
-  if (minutes <= 1) {
+  if (minutes == 0) {
     if (countdownType == "work") titleText = "Break soon!";
     if (countdownType == "break") titleText = "Work soon!";
   } else {
